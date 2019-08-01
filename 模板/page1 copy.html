@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/swiper.css">
+    <link rel="stylesheet" href="css/head.css">
+    <title>首页</title>
+    <style>
+        p {
+            margin: 0;
+            padding: 0;
+        }
+
+        .color33 {
+            color: #333333;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        .kbb-fs-15 {
+            font-size: 15px;
+            font-weight: 500;
+        }
+
+        .kbb-bd-1 {
+            border: 1px solid grey;
+        }
+
+        .margin2p {
+            margin: 2%;
+        }
+
+        .padding5p {
+            padding: 5%;
+        }
+
+        .kbb-w2-1 {
+            width: 40%;
+        }
+
+        .content-item {
+            width: 80%;
+            margin: 20px auto;
+            text-align: center;
+        }
+
+        .content-item-title {
+            margin: 20px 0;
+        }
+
+        .content-item-title p:first-child {
+            font-size: 30px;
+        }
+
+        .content-item-title p:last-child {
+            font-size: 25px;
+        }
+
+        .core-product li {
+            width: 20%;
+            float: left;
+        }
+
+        .core-product ul {
+            width: auto;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .core-product li {
+            padding: 0 1%;
+        }
+
+        .core-product li img {
+            width: 100%;
+            max-width: 200px;
+            /* height: 300px; */
+        }
+
+        .core-product ul::after {
+            content: ' ';
+            display: block;
+            clear: both;
+        }
+
+        /* 联系条 start */
+        .connect-line {
+            height: 150px;
+            background: url('imgs/connect-line.png');
+            background-color: red;
+            /* margin-bottom: 20px; */
+            text-align: center;
+        }
+
+        .connect-line p {
+            line-height: 150px;
+            color: #fff;
+            font-size: 22px;
+        }
+
+        /* 公司简介 */
+        .introduction {
+            background-color: #dfdfdf;
+            padding: 20px;
+        }
+
+        .introduction .content-item {
+            margin: 0 auto;
+        }
+
+        .introduction .content-item-title {
+            padding: 20px 0;
+        }
+
+        .introduction .intro-img img {
+            width: 100%;
+            max-width: 580px;
+        }
+
+        .introduction .intro-details {
+            font-size: 15px;
+            line-height: 26px;
+            text-align: left;
+            padding: 1%;
+        }
+
+        .introduction .intro-btn {
+            display: inline-block;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .core-technology {
+            position: relative;
+
+        }
+
+        .core-tech-img {
+            width: 90%;
+            margin: 30px auto;
+        }
+
+        .core-tech-img img {
+            width: 100%;
+            max-height: 550px;
+        }
+
+        .core-tech-more {
+            position: relative;
+            text-align: left;
+        }
+
+        .core-tech-more-img {
+            width: 90%;
+            margin: 0 auto;
+            position: relative;
+
+        }
+
+        .core-tech-more img {
+            width: 100%;
+            max-width: 180px;
+            text-align: center;
+            /* max-height: 198px; */
+        }
+
+        .img-center {
+            display: inline-block;
+            width: 20%;
+            max-width: 180px;
+            text-align: left;
+        }
+
+        .line {
+            display: block;
+            width: 100%;
+            border-top: 1px solid black;
+            position: absolute;
+            bottom: 50%;
+            z-index: -1000;
+        }
+
+        .img-right {
+            width: 80%;
+            display: inline-block;
+            height: 50%;
+            position: absolute;
+            bottom: 0;
+            text-align: center;
+        }
+
+        .img-right-item {
+            vertical-align: bottom;
+        }
+
+        .img-right-item {
+            display: inline-block;
+            width: 18%;
+        }
+
+        .img-right-item img {
+            width: 100%;
+        }
+
+
+        /* 联系条 end */
+        @media screen and (max-width: 1200px) {
+            .connect-line {
+                height: 100px;
+            }
+
+            .connect-line p {
+                line-height: 100px;
+                font-size: 18px;
+            }
+
+            .introduction .intro-details {
+                font-size: 13px;
+                line-height: 22px;
+            }
+        }
+
+        @media screen and (max-width: 992px) {
+            .connect-line {
+                /* height: 80px; */
+            }
+
+            .connect-line p {
+                line-height: 80px;
+                font-size: 15px;
+            }
+
+        }
+
+        @media screen and (max-width: 768px) {
+            .core-product li {
+                width: 33.33333%;
+            }
+
+            .core-product li:nth-child(4) {
+                margin-left: 16.66666%;
+            }
+
+            .content-item {
+                margin-top: 80px;
+                width: 100%;
+            }
+
+            .content-item-title p:first-child {
+                font-size: 25px;
+            }
+
+            .content-item-title p:last-child {
+                font-size: 20px;
+            }
+
+            .connect-line {
+                /* height: 70px; */
+            }
+
+            .connect-line p {
+                line-height: 30px;
+                font-size: 16px;
+                padding: 2vw;
+            }
+
+            .core-tech-more {
+                text-align: center;
+            }
+
+            .core-tech-more-img {
+                text-align: center;
+            }
+
+            .img-center {
+                display: block;
+                width: 100%;
+                text-align: center;
+                margin: 0 auto;
+            }
+
+            .line {
+                display: none;
+            }
+
+            .img-right {
+                position: relative;
+                width: 100%;
+            }
+
+            .img-right-item {
+                display: inline-block;
+                margin: 10px 0;
+                width: 40%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 头部 start -->
+    <div class="head">
+        <div class="head-logo">
+            <div class="logo-img">
+                <img src="imgs/header-bg.jpg" alt="logo">
+                <img src="imgs/header-bg.jpg" alt="标题">
+            </div>
+            <div class="nav-btn">
+                <img src="imgs/nav-up.png" class="nav-up show" alt="">
+                <img src="imgs/nav-down.png" class="nav-down hide" alt="">
+            </div>
+        </div>
+
+        <!-- 导航 start -->
+        <div class="head-nav show">
+            <ul class="kbb-nav">
+                <li class="kbb-nav-li nav-active">
+                    <a href="#">首页</a>
+                </li>
+                <li class="kbb-nav-li">
+                    <a href="">核心产品</a>
+                </li>
+                <li class="kbb-nav-li">
+                    <a href="">解决方案及服务</a>
+                </li>
+                <li class="kbb-nav-li">
+                    <a href="">用户案例</a>
+                </li>
+                <li class="kbb-nav-li">
+                    <a href="">新闻资讯</a>
+                </li>
+                <li class="kbb-nav-li">
+                    <a href="">关于我们</a>
+                </li>
+                <li class="kbb-nav-li">
+                    <a href="">加入我们</a>
+                </li>
+            </ul>
+        </div>
+        <!-- 导航 end -->
+
+    </div>
+    <!-- 头部 end -->
+
+    <!-- 内容 start -->
+    <div class="content">
+
+        <!-- 核心产品 -->
+        <div class="core-product content-item">
+            <div class="content-item-title">
+                <p>核心产品</p>
+                <p style="color: rgb(3, 116, 169)">CORE PRODUCT</p>
+            </div>
+            <ul class="core-product-items">
+                <li>
+                    <a href="javascript:void">
+                        <img src="imgs/core-product-1.png" class="hide" alt="">
+                        <img src="imgs/core-product-2.png" class="show" alt="">
+                    </a>
+                </li>
+                <li class="">
+                    <a href="javascript:void">
+                        <img src="imgs/core-product-1.png" class="hide" alt="">
+                        <img src="imgs/core-product-2.png" class="show" alt="">
+                    </a>
+                </li>
+                <li class="">
+                    <a href="javascript:void">
+                        <img src="imgs/core-product-1.png" class="hide" alt="">
+                        <img src="imgs/core-product-2.png" class="show" alt="">
+                    </a>
+                </li>
+                <li class="">
+                    <a href="javascript:void">
+                        <img src="imgs/core-product-1.png" class="hide" alt="">
+                        <img src="imgs/core-product-2.png" class="show" alt="">
+                    </a>
+                </li>
+                <!-- col-xs-6 col-sm-4 col-md-2 col-lg-2 -->
+                <li class="">
+                    <a href="javascript:void">
+                        <img src="imgs/core-product-1.png" class="hide" alt="">
+                        <img src="imgs/core-product-2.png" class="show" alt="">
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- 联系条 start -->
+
+        <div class="connect-line">
+            <p>深入行业，提供智能制造解决方案咨询服务与智能制造数据服务 点击了解更多或直接致电我们 010-50952530</p>
+        </div>
+        <!-- 联系条 end -->
+
+        <!-- 公司简介 start -->
+        <div class="introduction">
+
+
+            <div class="content-item">
+                <div class="content-item-title">
+                    <p>公司简介</p>
+                    <p style="color: rgb(3, 116, 169)">COMPANY PROFILE</p>
+                </div>
+
+                <div class="intro-info">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-7 col-sm-7 col-xs-12">
+                            <div class="intro-details">
+                                <p class="color33">
+                                    航天新长征大道科技有限公司是中国航天科技集团有限公司旗下的高新科技企业，公司以助推中国智能制造为使命，聚焦数据与智能技术创新，依托依托工业大数据分析及服务平台、工业智能技术等核心技术，打造航天大道大道生产线、大道数据、大道物联、大道慧眼等系列产品并提供智能制造解决方案咨询服务与智能制造数据服务，致力于为企业提供智能制造系统解决方案、产品和服务，实现智能生产、智能服务、智能商业模式，提升企业价值空间和综合竞争力
+                                </p>
+                                <div class="center kbb-fs-15">
+                                    <span class="intro-btn margin2p padding5p kbb-bd-1 .kbb-w2-1">大道制造</span>
+                                    <span class="intro-btn margin2p padding5p kbb-bd-1 .kbb-w2-1">大道物联</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-5 col-sm-5 col-xs-12">
+                            <div class="intro-img">
+                                <img src="imgs/intro-info.png" alt="">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 公司简介 end -->
+
+        <!-- 核心技术及产品 start -->
+        <div class="core-technology">
+
+
+            <div class="content-item">
+                <div class="content-item-title">
+                    <p>核心技术及产品</p>
+                    <p style="color: rgb(3, 116, 169)">CORE TECHNOLOGY</p>
+                </div>
+
+                <!-- 核心技术产品图片 -->
+                <div class="core-tech-img">
+                    <img src="imgs/core-tech.png" alt="">
+                </div>
+
+            </div>
+            <div class="core-tech-more">
+                <div style="display: block;width: 80%; margin: 0 auto;">
+                    <div class="core-tech-more-img">
+                        <div class="img-center">
+                            <img src="imgs/core-tech-more-1.png" alt="">
+                            <span>
+                                <span>查看更多产品</span>
+                                <br>
+                                <span>进一步了解我们</span>
+                            </span>
+                        </div>
+                        <div class="img-right">
+
+                            <span class="img-right-item">
+                                <img src="imgs/img-center-1A.png" alt="">
+                            </span>
+                            <span class="img-right-item">
+                                <img src="imgs/img-center-1A.png" alt="">
+                            </span>
+                            <span class="img-right-item">
+                                <img src="imgs/img-center-1A.png" alt="">
+                            </span>
+                            <span class="img-right-item">
+                                <img src="imgs/img-center-1A.png" alt="">
+                            </span>
+                            <span class="img-right-item">
+                                <img src="imgs/img-center-1.png" alt="">
+                            </span>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="line"></div>
+            </div>
+        </div>
+        <!-- 核心技术及产品 end -->
+
+        <!-- 解决方案 start-->
+        <!-- 解决方案 end -->
+    </div>
+    <!-- 内容 end -->
+
+    <!-- 尾部 start -->
+    <div class="foot">
+        <div class="row">
+
+            <!-- 公司信息 -->
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                <div class="foot-info">
+                    <div class="foot-logo">
+                        <img src="imgs/foot-logo.png" alt="">
+                    </div>
+                    <p>航天新长征大道科技有限公司</p>
+                    <div class="info-detail">
+                        <p>
+                            公司电话：
+                            <br>
+                            010-50952530 010-50952532
+                        </p>
+                        <p>
+                            地址：
+                            <br>
+                            北京市丰台区南四环西路128号</p>
+                        <p>辽ICP备18006661号</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 合作商信息 -->
+            <div class="col-lg-3 col-md-3 col-sm-5 col-xs-12">
+                <div class="cooperation">
+                    <ul>
+                        <!--   如果增加项目则需要改变margin值  -->
+                        <li>
+                            <div class="key">产品和解决方案：</div>
+                            <div class="value">chanpin@htdadao.net</div>
+                        </li>
+                        <li>
+                            <div class="key">商务合作：</div>
+                            <div class="value">office@htdadao.net</div>
+                        </li>
+                        <li>
+                            <div class="key">媒体合作：</div>
+                            <div class="value">market@htdadao.net</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- <div class="item-clear"></div> -->
+
+            <!-- 其他菜单 -->
+            <div class="col-lg-4 col-md-4 col-sm-5 col-xs-6 other-list-item">
+                <div class="aboutUs-list row">
+                    <ul class="col-lg-6 col-md-6 col-sm-6">
+                        <li>
+                            <a href="">关于我们</a>
+                        </li>
+                        <li>
+                            <a href="">公司简介</a>
+                        </li>
+                        <li>
+                            <a href="">新闻资讯</a>
+                        </li>
+                        <li>
+                            <a href="">联系我们</a>
+                        </li>
+                        <li>
+                            <a href="">加入我们</a>
+                        </li>
+
+                    </ul class="col-lg-6 col-md-6 col-sm-6">
+                    <ul class="col-lg-6">
+                        <li>
+                            <a href="">近期资讯</a>
+                        </li>
+                        <li>
+                            <a href="">大道生产线</a>
+                        </li>
+                        <li>
+                            <a href="">大道数据</a>
+                        </li>
+                        <li>
+                            <a href="">大道物联</a>
+                        </li>
+                        <li>
+                            <a href="">大道慧眼</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 二维码 -->
+            <div class="col-lg-1 col-md-1 col-sm-2 col-xs-12">
+                <div class="QRcode">
+                    <img src="imgs/QRcode.jpg" alt="二维码">
+                    <p>扫码关注微信</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 尾部 end -->
+    <script src="js/jquery-1.12.4.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/swiper.js"></script>
+    <script src="js/head.js"></script>
+    <script>
+        $(function () {
+
+
+
+
+        })
+
+    </script>
+</body>
+
+</html>

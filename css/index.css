@@ -1,0 +1,339 @@
+p {
+    margin: 0;
+    padding: 0;
+}
+a:hover {
+    color: aqua;
+}
+
+.color33 {
+    color: #333333;
+}
+
+.center {
+    text-align: center;
+}
+
+.kbb-fs-15 {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.kbb-bd-1 {
+    border: 1px solid grey;
+}
+
+.margin2p {
+    margin: 2%;
+}
+
+.padding5p {
+    padding: 5%;
+}
+
+.kbb-w2-1 {
+    width: 40%;
+}
+
+/* 解决方案 start */
+
+.content-item {
+    width: 80%;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.content-item-title {
+    margin: 20px 0;
+    padding: 10px 0;
+}
+
+.content-item-title p:first-child {
+    font-size: 30px;
+}
+
+.content-item-title p:last-child {
+    font-size: 25px;
+}
+
+.core-product li {
+    width: 25%;
+    float: left;
+}
+
+.core-product ul {
+    width: auto;
+    margin: 0 auto;
+    text-align: center;
+    /* padding-bottom: ; */
+}
+
+.core-product li {
+    text-align: center;
+    padding: 0 2%;
+}
+
+.core-product li img {
+    width: 100%;
+    max-width: 150px;
+    max-height: 180px;
+    margin: 0 auto;
+    /* height: 300px; */
+}
+
+.core-product ul::after {
+    content: ' ';
+    display: block;
+    clear: both;
+}
+
+/* 解决方案 end */
+
+
+/* 产品与平台 start */
+.product-platform {
+    background-color: #dfdfdf;
+    width: 100%;
+    padding: 20px;
+}
+
+.cases-group {
+    display: flex;
+    display: -webkit-flex;
+    flex-flow: row;
+    justify-content: center;
+}
+
+/* *********这里可以修改图片宽度和高度************* */
+.cases-group .cases {
+    padding: 20px;
+    width: 25%;
+}
+
+.cases-group .cases img {
+    width: 100%;
+    height: 200px;
+    max-height: 200px;
+}
+
+
+
+/* 产品与平台 end */
+
+/* 核心产品与技术 start */
+.core-technology {
+    position: relative;
+
+}
+
+.core-tech-img {
+    width: 90%;
+    margin: 30px auto;
+}
+
+.core-tech-img img {
+    width: 100%;
+    max-height: 550px;
+}
+
+/* 核心产品与技术 start */
+
+/* 公司简介 start */
+.introduction {
+    background-color: #dfdfdf;
+    padding: 20px;
+}
+
+.introduction .content-item {
+    margin: 0 auto;
+}
+
+.introduction .content-item-title {
+    padding: 20px 0;
+}
+
+.introduction .intro-img img {
+    width: 100%;
+    height:200px;
+    max-width: 580px;
+}
+
+.introduction .intro-details {
+    font-size: 15px;
+    line-height: 26px;
+    text-align: left;
+    padding: 1%;
+}
+
+.introduction .intro-btn {
+    display: inline-block;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* 公司简介 end */
+
+/* 新闻资讯 start */
+.news-group {
+    display: flex;
+    display: -webkit-flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+}
+
+.news-items {
+    display: flex;
+    display: -webkit-flex;
+    flex-shrink: 0;
+    width: 50%;
+    height: 100px;
+    margin-top: 20px;
+}
+
+.news-items .news-img {
+    max-width: 20%;
+}
+
+.news-items .news-img img {
+    width: 100%;
+    height: 100%;
+}
+
+.news-items h5 {
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+}
+
+.news-items .times {
+    font-size: 10px;
+    color: grey;
+}
+
+.news-items .article {
+    max-width: 80%;
+    text-align: left;
+    padding-left: 30px;
+    flex: 1 1 auto;
+}
+
+.news-items .article p {
+    font-size: 13px;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+
+}
+
+/* 新闻资讯 end */
+
+
+
+@media screen and (max-width: 1200px) {
+    .connect-line {
+        height: 100px;
+    }
+
+    .connect-line p {
+        line-height: 100px;
+        font-size: 18px;
+    }
+
+    .introduction .intro-details {
+        font-size: 13px;
+        line-height: 22px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .connect-line {
+        /* height: 80px; */
+    }
+
+    .connect-line p {
+        line-height: 80px;
+        font-size: 15px;
+    }
+
+    .news-items {
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .core-product ul {
+        width: 80%;
+    }
+
+    .core-product li {
+        width: 50%;
+    }
+
+    /* 公司简介 */
+    .introduction .intro-details {
+        font-size: 17px;
+        line-height: 34px;
+    }
+
+    /* 产品与平台 */
+    .cases-group {
+        display: block;
+    }
+    .cases-group .cases {
+        padding: 20px;
+        width: 100%;
+    }
+
+    .content-item {
+        margin-top: 80px;
+        width: 100%;
+    }
+
+    .content-item-title p:first-child {
+        font-size: 25px;
+    }
+
+    .content-item-title p:last-child {
+        font-size: 20px;
+    }
+
+    .connect-line {
+        /* height: 70px; */
+    }
+
+    .connect-line p {
+        line-height: 30px;
+        font-size: 16px;
+        padding: 2vw;
+    }
+
+    .news {
+        width: 90%;
+    }
+
+    .news-items {
+        width: 100%;
+    }
+
+    .news-items .news-img {
+        width: 100%;
+    }
+
+    .news-items .article p {
+        width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+
+        /* overflow: hidden;
+        text-overflow: ellipsis; 
+        white-space: nowrap; */
+    }
+
+}

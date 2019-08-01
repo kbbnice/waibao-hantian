@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/swiper.css">
+    <title>首页</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            /* background-color: darkblue; */
+            font-family: "微软雅黑";
+        }
+
+        a {
+            color: inherit;
+        }
+
+        ul {
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+        .item-clear {
+            content: ' ';
+            display: none;
+            clear: both;
+        }
+
+        .kbb-nav {
+            font-size: 16px;
+            font-family: "微软雅黑";
+            color: #fff;
+            width: 100%;
+        }
+
+        .kbb-nav .kbb-nav-li {
+            float: left;
+            margin: 10px;
+        }
+
+        /* 头部 start */
+        .head {
+            max-height: 800px;
+            background-color: rgb(122, 150, 226);
+            background: url('imgs/head-img.png') no-repeat;
+            background-size: 100% 100%;
+        }
+
+        .head .head-logo {
+            background-color: rgb(95, 86, 175);
+        }
+
+        .head .head-logo .logo-img {
+            /* text-align: center; */
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        .head .head-logo img {
+            width: 50px;
+            height: 50px;
+            margin: 10px;
+        }
+
+        .nav-btn {
+            position: absolute;
+            top: 0;
+            right: 15px;
+        }
+
+
+
+
+        .head-nav {
+            text-align: center;
+        }
+
+        .kbb-nav {
+            width: auto;
+            /* background-color: rgba(255, 255, 255, 0.795); */
+            display: inline-block;
+            font-size: 16px;
+            font-family: "微软雅黑";
+            color: #fff;
+        }
+
+        .kbb-nav .kbb-nav-li {
+            float: left;
+            /* margin可以设置li宽度 */
+            margin: 10px 15px;
+            cursor: pointer;
+        }
+
+        .nav-active {
+            color: rgb(77, 182, 196);
+        }
+
+        kbb-nav::after {
+            content: ' ';
+            display: block;
+            clear: both;
+        }
+
+        /* 头部 end */
+
+
+        /* 尾部 start */
+        .foot {
+            background-color: #034b6c;
+            color: #fff;
+            padding-top: 20px;
+        }
+
+        .foot .row {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .foot-info {
+            /* width: 70%; */
+            margin: 18px auto;
+            font-size: 21px;
+            text-align: left;
+        }
+
+        .foot-info .info-detail {
+            margin-top: 20px;
+            font-size: 21px;
+            text-align: left;
+        }
+
+        /* .foot */
+        .foot .foot-info img {
+            width: 100%;
+            max-width: 520px;
+        }
+
+        /* 合作商 */
+        .cooperation li {
+            /* 如果增加li则需要改变margin值 */
+            margin: 30px 0;
+            font-size: 21px;
+        }
+
+        .cooperation li div {
+            display: block;
+        }
+
+        .aboutUs-list ul li {
+            margin: 30px 0;     
+        }
+
+        .QRcode {
+            height: 280px;
+            text-align: center;
+        }
+        .QRcode img {
+            width: 100%;
+            margin-top: 50%;
+            margin-bottom: 20px;
+            max-width: 100px;
+            vertical-align: middle;
+        }
+        .QRcode {
+            white-space: nowrap;
+            word-break: keep-all;
+        }
+
+
+
+        /* 尾部 end */
+
+        @media screen and (max-width: 1200px) {
+            .foot-info {
+                font-size: 18px;
+            }
+
+            .foot-info .info-detail {
+                font-size: 1.3vw;
+            }
+
+            .cooperation li {
+                font-size: 1.3vw;
+            }
+        }
+
+        @media screen and (max-width: 992px) {
+            .item-clear {
+                display: block;
+            }
+            .foot-info {
+                font-size: 20px;
+            }
+
+            .foot-info .info-detail {
+                font-size: 18px;
+            }
+
+            .cooperation li {
+                font-size: 18px;
+
+            }
+            
+            .other-list-item {
+                display: none;
+            }
+            .aboutUs-list ul li {
+            margin: 25px 0;     
+        }
+        }
+
+
+
+        @media screen and (max-width: 768px) {
+
+            /* 头部logo */
+            .head .head-logo img {
+                width: 30px;
+                height: 30px;
+            }
+
+            /* 头部导航 */
+            .kbb-nav {
+                position: absolute;
+                right: 0;
+                width: 135px;
+                padding: 0;
+                margin: 0;
+                background-color: rgba(255, 255, 255, 0.795);
+                color: rgb(72, 82, 168);
+            }
+
+            .kbb-nav .kbb-nav-li {
+                float: none;
+            }
+
+            .foot-info {
+                width: 100%;
+                margin: 18px auto;
+                font-size: 5vw;
+                text-align: center;
+            }
+
+            .cooperation li div {
+                display: inline;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 头部 start -->
+    <div class="head">
+        <div class="head-logo">
+            <div class="logo-img">
+                <img src="imgs/header-bg.jpg" alt="logo">
+                <img src="imgs/header-bg.jpg" alt="标题">
+            </div>
+            <div class="nav-btn">
+                <img src="imgs/nav-up.png" class="nav-up show" alt="">
+                <img src="imgs/nav-down.png" class="nav-down hide" alt="">
+            </div>
+        </div>
+
+        <!-- 导航 start -->
+        <div class="head-nav show">
+            <ul class="kbb-nav">
+                <li class="kbb-nav-li nav-active">
+                    <a href="#">首页</a>
+                </li>
+                <li class="kbb-nav-li">
+                    <a href="">核心产品</a>
+                </li>
+                <li class="kbb-nav-li">
+                    <a href="">解决方案及服务</a>
+                </li>
+                <li class="kbb-nav-li">
+                    <a href="">用户案例</a>
+                </li>
+                <li class="kbb-nav-li">
+                    <a href="">新闻资讯</a>
+                </li>
+                <li class="kbb-nav-li">
+                    <a href="">关于我们</a>
+                </li>
+                <li class="kbb-nav-li">
+                    <a href="">加入我们</a>
+                </li>
+            </ul>
+        </div>
+        <!-- 导航 end -->
+
+    </div>
+    <!-- 头部 end -->
+
+    <!-- 尾部 start -->
+    <div class="foot">
+        <div class="row">
+
+            <!-- 公司信息 -->
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                <div class="foot-info">
+                    <div class="foot-logo">
+                        <img src="imgs/foot-logo.png" alt="">
+                    </div>
+                    <p>航天新长征大道科技有限公司</p>
+                    <div class="info-detail">
+                        <p>
+                            公司电话：
+                            <br>
+                            010-50952530 010-50952532
+                        </p>
+                        <p>
+                            地址：
+                            <br>
+                            北京市丰台区南四环西路128号</p>
+                        <p>辽ICP备18006661号</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 合作商信息 -->
+            <div class="col-lg-3 col-md-3 col-sm-5 col-xs-12">
+                <div class="cooperation">
+                    <ul>
+                        <!--   如果增加项目则需要改变margin值  -->
+                        <li>
+                            <div class="key">产品和解决方案：</div>
+                            <div class="value">chanpin@htdadao.net</div>
+                        </li>
+                        <li>
+                            <div class="key">商务合作：</div>
+                            <div class="value">office@htdadao.net</div>
+                        </li>
+                        <li>
+                            <div class="key">媒体合作：</div>
+                            <div class="value">market@htdadao.net</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- <div class="item-clear"></div> -->
+
+            <!-- 其他菜单 -->
+            <div class="col-lg-4 col-md-4 col-sm-5 col-xs-6 other-list-item">
+                <div class="aboutUs-list row">
+                    <ul class="col-lg-6 col-md-6 col-sm-6">
+                        <li>
+                            <a href="">关于我们</a>
+                        </li>
+                        <li>
+                            <a href="">公司简介</a>
+                        </li>
+                        <li>
+                            <a href="">新闻资讯</a>
+                        </li>
+                        <li>
+                            <a href="">联系我们</a>
+                        </li>
+                        <li>
+                            <a href="">加入我们</a>
+                        </li>
+
+                    </ul class="col-lg-6 col-md-6 col-sm-6">
+                    <ul class="col-lg-6">
+                        <li>
+                            <a href="">近期资讯</a>
+                        </li>
+                        <li>
+                            <a href="">大道生产线</a>
+                        </li>
+                        <li>
+                            <a href="">大道数据</a>
+                        </li>
+                        <li>
+                            <a href="">大道物联</a>
+                        </li>
+                        <li>
+                            <a href="">大道慧眼</a>
+                        </li>                       
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 二维码 -->
+            <div class="col-lg-1 col-md-1 col-sm-2 col-xs-12">
+                <div class="QRcode">
+                    <img src="imgs/QRcode.jpg" alt="二维码">
+                    <p>扫码关注微信</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 尾部 end -->
+    <script src="js/jquery-1.12.4.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/swiper.js"></script>
+    <script>
+        $(function () {
+
+
+            // 按钮切换
+            function navBtnUpShow() {
+                $('.nav-btn').children('.nav-up').addClass('show').removeClass('hide')
+                $('.nav-btn').children('.nav-down').addClass('hide').removeClass('show')
+            }
+            function navBtnDownShow() {
+                $('.nav-btn').children('.nav-down').addClass('show').removeClass('hide')
+                $('.nav-btn').children('.nav-up').addClass('hide').removeClass('show')
+            }
+
+            // 显示隐藏导航
+            function navHide() {
+                $('.head-nav').addClass('hide').removeClass('show')
+                navBtnDownShow()
+
+            }
+            function navShow() {
+                $('.head-nav').addClass('show').removeClass('hide')
+                navBtnUpShow()
+            }
+
+            navHide()
+            // 自适应屏幕宽高
+            function resetSets() {
+                // 1200 / 800
+                var num = 800 / 1200
+                $('.head').height($(window).width() * num)
+                
+                if ($(window).width() > 992) {
+                    $('.other-list-item').show()
+                }
+                if ($(window).width() > 768) {
+                    
+                    $('.nav-btn').children().addClass('hide').removeClass('show')
+                    $('.head-nav').addClass('show').removeClass('hide')
+                } else {
+                    navHide()
+                    $('.other-list-item').hide()
+
+                    // 导航切换
+                    $('.head-nav').on('click', '.kbb-nav-li', function () {
+                        navHide()
+                    })
+                }
+            }
+            resetSets()
+            $(window).resize(function () {
+                resetSets()
+            })
+
+            // 切换导航
+            $('.nav-up').click(function () {
+                navHide()
+            })
+            $('.nav-down').click(function () {
+                navShow()
+            })
+
+            // 导航点击事件
+
+
+        })
+
+    </script>
+</body>
+
+</html>
