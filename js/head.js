@@ -1,8 +1,23 @@
+var swiper = new Swiper('.head-swiper', {
+    autoplay: {
+        delay: 4000,
+        stopOnLastSlide: false,
+        disableOnInteraction: false,
+    },
+    loop: true,
+
+    pagination: {
+        el: '.swiper-pagination',
+
+    },
+});
+
 // 按钮切换
 function navBtnUpShow() {
     $('.nav-btn').children('.nav-up').addClass('show').removeClass('hide')
     $('.nav-btn').children('.nav-down').addClass('hide').removeClass('show')
 }
+
 function navBtnDownShow() {
     $('.nav-btn').children('.nav-down').addClass('show').removeClass('hide')
     $('.nav-btn').children('.nav-up').addClass('hide').removeClass('show')
@@ -14,6 +29,7 @@ function navHide() {
     navBtnDownShow()
 
 }
+
 function navShow() {
     $('.head-nav').addClass('show').removeClass('hide')
     navBtnUpShow()
@@ -24,16 +40,16 @@ navHide()
 function resetSets() {
     // 1200 / 800
     var num = 800 / 1800
-    $('.head').height($(window).width() * num)
+    $('.head').height($(window).width() * num + 30)
     // $('.swiper-container').height($(window).width() * num)
     // $('.swiper-container').height($(window).width() * num)
 
-    
+
     if ($(window).width() > 992) {
         $('.other-list-item').show()
     }
     if ($(window).width() > 768) {
-        
+
         $('.nav-btn').children().addClass('hide').removeClass('show')
         $('.head-nav').addClass('show').removeClass('hide')
     } else {
@@ -45,7 +61,7 @@ function resetSets() {
             navHide()
         })
     }
-    $('.swiper-container').css( {
+    $('.swiper-container').css({
         width: '100%',
         height: '100%'
     })

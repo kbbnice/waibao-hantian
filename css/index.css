@@ -265,6 +265,7 @@ a:hover {
 }
 
 @media screen and (max-width: 768px) {
+    
     .core-product ul {
         width: 80%;
     }

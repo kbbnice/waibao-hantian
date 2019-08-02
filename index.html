@@ -12,39 +12,25 @@
     <link rel="stylesheet" href="css/index.css">
     <title>首页</title>
     <style>
-        .head .bg {
+        .co-customer.content-item {
             width: 100%;
-            position: absolute;
-            z-index: -1;
+            background-color: #ececec;
+            margin-bottom: 30px;
+            padding-bottom: 30px;
         }
 
-        .swiper-container {
+        .co-customer ul {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .co-customer li {
+            padding: 10px;
+        }
+
+        .co-customer li img {
             width: 100%;
-            height: 100%;
-        }
 
-        .swiper-slide {
-            text-align: center;
-            font-size: 18px;
-            background: #fff;
-
-            /* Center slide text vertically */
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: -webkit-flex;
-            display: flex;
-            -webkit-box-pack: center;
-            -ms-flex-pack: center;
-            -webkit-justify-content: center;
-            justify-content: center;
-            -webkit-box-align: center;
-            -ms-flex-align: center;
-            -webkit-align-items: center;
-            align-items: center;
-        }
-        .swiper-slide img {
-            max-width: 100%;
-            max-height: 100%;
         }
     </style>
 </head>
@@ -53,8 +39,17 @@
 
     <!-- 头部 start -->
     <div class="head">
+        <div class="head-logo">
+            <div class="logo-img">
+                <img src="imgs/logo.png" alt="logo">
+            </div>
+            <div class="nav-btn">
+                <img src="imgs/nav-up.png" class="nav-up show" alt="">
+                <img src="imgs/nav-down.png" class="nav-down hide" alt="">
+            </div>
+        </div>
         <div class="bg">
-            <div class="swiper-container">
+            <div class="swiper-container head-swiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <img src="imgs/head-img.png" alt="">
@@ -68,22 +63,13 @@
                     <div class="swiper-slide">
                         <img src="imgs/head-img.png" alt="">
                     </div>
-                    
+
                 </div>
                 <!-- Add Pagination -->
                 <div class="swiper-pagination"></div>
             </div>
         </div>
-        <div class="head-logo">
-            <div class="logo-img">
-                <img src="imgs/header-bg.jpg" alt="logo">
-                <img src="imgs/header-bg.jpg" alt="标题">
-            </div>
-            <div class="nav-btn">
-                <img src="imgs/nav-up.png" class="nav-up show" alt="">
-                <img src="imgs/nav-down.png" class="nav-down hide" alt="">
-            </div>
-        </div>
+
 
         <!-- 导航 start -->
         <div class="head-nav show">
@@ -95,7 +81,7 @@
                     <a href="coreProduct.html">核心产品</a>
                 </li>
                 <li class="kbb-nav-li">
-                    <a href="">解决方案及服务</a>
+                    <a href="service.html">解决方案及服务</a>
                 </li>
                 <li class="kbb-nav-li">
                     <a href="customCases.html">用户案例</a>
@@ -106,9 +92,9 @@
                 <li class="kbb-nav-li">
                     <a href="aboutUs.html">关于我们</a>
                 </li>
-                <li class="kbb-nav-li">
+                <!-- <li class="kbb-nav-li">
                     <a href="">加入我们</a>
-                </li>
+                </li> -->
             </ul>
         </div>
         <!-- 导航 end -->
@@ -120,7 +106,7 @@
     <div class="content">
 
         <!-- 解决方案 start -->
-        <div class="core-product content-item">
+        <div class="core-product content-item" style="margin-top: 50px">
             <div class="content-item-title">
                 <p>解决方案</p>
                 <p style="color: rgb(3, 116, 169)">SOLUTION</p>
@@ -229,7 +215,7 @@
                 </div>
             </div>
         </div>
-        <!-- 公司简介 end -->
+        <!-- 新闻资讯 end -->
 
         <div class="news content-item">
             <div class="content-item-title">
@@ -273,125 +259,177 @@
 
             </div>
         </div>
-    </div>
-    <!-- 内容 end -->
+        <!-- 新闻资讯 end -->
 
-    <!-- 尾部 start -->
-    <div class="foot">
-        <div class="row">
-
-            <!-- 公司信息 -->
-            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                <div class="foot-info">
-                    <div class="foot-logo">
-                        <img src="imgs/foot-logo.png" alt="">
+        <!-- 合作伙伴 start  -->
+        <div class="co-customer content-item">
+            <div class="content-item-title">
+                <p>合作伙伴</p>
+                <p style="color: rgb(3, 116, 169)">OUR PARTNERS</p>
+            </div>
+            <div class="">
+                <div class="swiper-container co-item-group">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide co-item">
+                            <img src="imgs/head-img.png" alt="">
+                        </div>
+                        <div class="swiper-slide co-item">
+                            <img src="imgs/head-img.png" alt="">
+                        </div>
+                        <div class="swiper-slide co-item">
+                            <img src="imgs/head-img.png" alt="">
+                        </div>
+                        <div class="swiper-slide co-item">
+                            <img src="imgs/head-img.png" alt="">
+                        </div>
+                        <div class="swiper-slide co-item">
+                            <img src="imgs/head-img.png" alt="">
+                        </div>
+                        <div class="swiper-slide co-item">
+                            <img src="imgs/head-img.png" alt="">
+                        </div>
+                        <div class="swiper-slide co-item">
+                            <img src="imgs/head-img.png" alt="">
+                        </div>
+                        <div class="swiper-slide co-item">
+                            <img src="imgs/head-img.png" alt="">
+                        </div>
                     </div>
-                    <p>航天新长征大道科技有限公司</p>
-                    <div class="info-detail">
-                        <p>
-                            公司电话：
-                            <br>
-                            010-50952530 010-50952532
-                        </p>
-                        <p>
-                            地址：
-                            <br>
-                            北京市丰台区南四环西路128号</p>
-                        <p>辽ICP备18006661号</p>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+            <!-- 合作伙伴 end -->
+
+        </div>
+        <!-- 内容 end -->
+
+        <!-- 尾部 start -->
+        <div class="foot">
+            <div class="row">
+
+                <!-- 公司信息 -->
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                    <div class="foot-info">
+                        <div class="foot-logo">
+                            <img src="imgs/foot-logo.png" alt="">
+                        </div>
+                        <p>航天新长征大道科技有限公司</p>
+                        <div class="info-detail">
+                            <p>
+                                公司电话：
+                                <br>
+                                010-50952530 010-50952532
+                            </p>
+                            <p>
+                                地址：
+                                <br>
+                                北京市丰台区南四环西路128号</p>
+                            <p>辽ICP备18006661号</p>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- 合作商信息 -->
-            <div class="col-lg-3 col-md-3 col-sm-5 col-xs-12">
-                <div class="cooperation">
-                    <ul>
-                        <!--   如果增加项目则需要改变margin值  -->
-                        <li>
-                            <div class="key">产品和解决方案：</div>
-                            <div class="value">chanpin@htdadao.net</div>
-                        </li>
-                        <li>
-                            <div class="key">商务合作：</div>
-                            <div class="value">office@htdadao.net</div>
-                        </li>
-                        <li>
-                            <div class="key">媒体合作：</div>
-                            <div class="value">market@htdadao.net</div>
-                        </li>
-                    </ul>
+                <!-- 合作商信息 -->
+                <div class="col-lg-3 col-md-3 col-sm-5 col-xs-12">
+                    <div class="cooperation">
+                        <ul>
+                            <!--   如果增加项目则需要改变margin值  -->
+                            <li>
+                                <div class="key">产品和解决方案：</div>
+                                <div class="value">chanpin@htdadao.net</div>
+                            </li>
+                            <li>
+                                <div class="key">商务合作：</div>
+                                <div class="value">office@htdadao.net</div>
+                            </li>
+                            <li>
+                                <div class="key">媒体合作：</div>
+                                <div class="value">market@htdadao.net</div>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-            <!-- <div class="item-clear"></div> -->
+                <!-- <div class="item-clear"></div> -->
 
-            <!-- 其他菜单 -->
-            <div class="col-lg-4 col-md-4 col-sm-5 col-xs-6 other-list-item">
-                <div class="aboutUs-list row">
-                    <ul class="col-lg-6 col-md-6 col-sm-6">
-                        <li>
-                            <a href="">关于我们</a>
-                        </li>
-                        <li>
-                            <a href="">公司简介</a>
-                        </li>
-                        <li>
-                            <a href="">新闻资讯</a>
-                        </li>
-                        <li>
-                            <a href="">联系我们</a>
-                        </li>
-                        <li>
-                            <a href="">加入我们</a>
-                        </li>
+                <!-- 其他菜单 -->
+                <div class="col-lg-4 col-md-4 col-sm-5 col-xs-6 other-list-item">
+                    <div class="aboutUs-list row">
+                        <ul class="col-lg-6 col-md-6 col-sm-6">
+                            <li>
+                                <a href="">关于我们</a>
+                            </li>
+                            <li>
+                                <a href="">公司简介</a>
+                            </li>
+                            <li>
+                                <a href="">新闻资讯</a>
+                            </li>
+                            <li>
+                                <a href="">联系我们</a>
+                            </li>
+                            <li>
+                                <a href="">加入我们</a>
+                            </li>
 
-                    </ul class="col-lg-6 col-md-6 col-sm-6">
-                    <ul class="col-lg-6">
-                        <li>
-                            <a href="">近期资讯</a>
-                        </li>
-                        <li>
-                            <a href="">大道生产线</a>
-                        </li>
-                        <li>
-                            <a href="">大道数据</a>
-                        </li>
-                        <li>
-                            <a href="">大道物联</a>
-                        </li>
-                        <li>
-                            <a href="">大道慧眼</a>
-                        </li>
-                    </ul>
+                        </ul class="col-lg-6 col-md-6 col-sm-6">
+                        <ul class="col-lg-6">
+                            <li>
+                                <a href="">近期资讯</a>
+                            </li>
+                            <li>
+                                <a href="">大道生产线</a>
+                            </li>
+                            <li>
+                                <a href="">大道数据</a>
+                            </li>
+                            <li>
+                                <a href="">大道物联</a>
+                            </li>
+                            <li>
+                                <a href="">大道慧眼</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
 
-            <!-- 二维码 -->
-            <div class="col-lg-1 col-md-1 col-sm-2 col-xs-12">
-                <div class="QRcode">
-                    <img src="imgs/QRcode.jpg" alt="二维码">
-                    <p>扫码关注微信</p>
+                <!-- 二维码 -->
+                <div class="col-lg-1 col-md-1 col-sm-2 col-xs-12">
+                    <div class="QRcode">
+                        <img src="imgs/QRcode.jpg" alt="二维码">
+                        <p>扫码关注微信</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- 尾部 end -->
-    <script src="js/jquery-1.12.4.js"></script>
-    <script src="js/bootstrap.js"></script>
-    <script src="js/swiper.js"></script>
-    <script src="js/head.js"></script>
-    <script>
-        $(function () {
-            var swiper = new Swiper('.swiper-container', {
+        <!-- 尾部 end -->
+        <script src="js/jquery-1.12.4.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script src="js/swiper.js"></script>
+        <script src="js/head.js"></script>
+        <script>
+
+            var swiper2 = new Swiper('.co-item-group', {
+                autoplay: {
+                    delay: 3000,
+                    disableOnInteraction: false,
+                },
+                slidesPerView: 3,
+                spaceBetween: 30,
+                centeredSlides: true,
+                loop: true,
                 pagination: {
                     el: '.swiper-pagination',
+                    clickable: true,
                 },
             });
+            $(function () {
 
 
 
-        })
+            })
 
-    </script>
+        </script>
 </body>
 
 </html>

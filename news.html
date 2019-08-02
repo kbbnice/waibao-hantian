@@ -9,8 +9,13 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/swiper.css">
     <link rel="stylesheet" href="css/head.css">
-    <title>首页</title>
+    <title>新闻资讯</title>
     <style>
+        .t-title::before {
+            content: ' '; 
+            display: block;
+            clear: both;
+        }
         .t-title {
             font-size: 22px;
             font-weight: bold;
@@ -18,7 +23,7 @@
             text-align: center;
             margin: 20px 0;
             padding-bottom: 30px;
-            border-bottom: 3px solid grey;
+            border-bottom: 1px solid rgb(169, 169, 169);
         }
 
         .news-group {
@@ -61,6 +66,12 @@
         .news-item {
             margin-bottom: 25px;
         }
+        .co-item {
+            padding: 20%;
+        }
+        .co-item img {
+            width: 100%;
+        }
     </style>
 </head>
 
@@ -68,16 +79,36 @@
 
     <!-- 头部 start -->
     <div class="head">
-        <div class="head-logo">
-            <div class="logo-img">
-                <img src="imgs/header-bg.jpg" alt="logo">
-                <img src="imgs/header-bg.jpg" alt="标题">
-            </div>
-            <div class="nav-btn">
-                <img src="imgs/nav-up.png" class="nav-up show" alt="">
-                <img src="imgs/nav-down.png" class="nav-down hide" alt="">
-            </div>
-        </div>
+            <div class="head-logo">
+                    <div class="logo-img">
+                        <img src="imgs/logo.png" alt="logo">
+                    </div>
+                    <div class="nav-btn">
+                        <img src="imgs/nav-up.png" class="nav-up show" alt="">
+                        <img src="imgs/nav-down.png" class="nav-down hide" alt="">
+                    </div>
+                </div>
+                <div class="bg">
+                    <div class="swiper-container head-swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="imgs/head-img.png" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="imgs/head-img.png" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="imgs/head-img.png" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="imgs/head-img.png" alt="">
+                            </div>
+        
+                        </div>
+                        <!-- Add Pagination -->
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
 
         <!-- 导航 start -->
         <div class="head-nav show">
@@ -89,17 +120,17 @@
                     <a href="coreProduct.html">核心产品</a>
                 </li>
                 <li class="kbb-nav-li">
-                    <a href="">解决方案及服务</a>
+                    <a href="service.html">解决方案及服务</a>
                 </li>
                 <li class="kbb-nav-li">
                     <a href="customCases.html">用户案例</a>
                 </li>
                 <li class="kbb-nav-li nav-active">
-                    <a href="news.html">新闻资讯</a>
+                    <a href="news.html ">新闻资讯</a>
                 </li>
-                <li class="kbb-nav-li">
+                <!-- <li class="kbb-nav-li">
                     <a href="aboutUs.html">关于我们</a>
-                </li>
+                </li> -->
                 <li class="kbb-nav-li">
                     <a href="">加入我们</a>
                 </li>
@@ -112,7 +143,7 @@
 
     <!-- 内容 start -->
     <div class="content">
-        <p class="t-title">新闻资讯</p>
+        <p class="t-title" style="margin-top: 50px">新闻资讯</p>
         <div class="news-group row">
 
             <!-- 新闻列表 start -->

@@ -20,6 +20,7 @@ li {
     padding: 0;
     margin: 0;
 }
+
 .item-clear {
     content: ' ';
     display: none;
@@ -27,7 +28,7 @@ li {
 }
 
 .kbb-nav {
-    
+
     font-size: 16px;
     font-family: "微软雅黑";
     color: #fff;
@@ -42,13 +43,16 @@ li {
 /* 头部 start */
 .head {
     max-height: 800px;
+    margin-bottom: 30px;
     /* background-color: rgb(122, 150, 226); */
     /* background: url('../imgs/head-img.png') no-repeat; */
     /* background-size: 100% 100%; */
 }
 
 .head .head-logo {
-    background-color: rgba(255, 255, 255, 0.36);
+    background-color: #031837;
+    position: relative;
+    z-index: 1000;
 }
 
 .head .head-logo .logo-img {
@@ -58,10 +62,10 @@ li {
 }
 
 .head .head-logo img {
-    width: 30px;
     height: 30px;
     margin: 10px;
 }
+
 .head-content {
     position: relative;
 }
@@ -76,6 +80,8 @@ li {
 
 
 .head-nav {
+    position: relative;
+    z-index: 100;
     text-align: center;
 }
 
@@ -105,6 +111,42 @@ kbb-nav::after {
     clear: both;
 }
 
+.head .bg {
+    width: 100%;
+    position: absolute;
+    /* z-index: -1; */
+}
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
 /* 头部 end */
 
 
@@ -115,6 +157,7 @@ kbb-nav::after {
     padding-top: 20px;
     margin-top: 20px;
 }
+
 .foot::before {
     content: ' ';
     display: block;
@@ -155,10 +198,12 @@ kbb-nav::after {
 .cooperation li div {
     display: block;
 }
+
 .aboutUs-list ul li {
-    margin: 30px 0;  
-    font-size: 13px; 
+    margin: 30px 0;
+    font-size: 13px;
 }
+
 .aboutUs-list li a:hover {
     color: rgb(139, 173, 236);
 }
@@ -167,6 +212,7 @@ kbb-nav::after {
     height: 280px;
     text-align: center;
 }
+
 .QRcode img {
     width: 100%;
     min-width: 100px;
@@ -175,6 +221,7 @@ kbb-nav::after {
     max-width: 100px;
     vertical-align: middle;
 }
+
 .QRcode {
     white-space: nowrap;
     word-break: keep-all;
@@ -202,6 +249,7 @@ kbb-nav::after {
     .item-clear {
         display: block;
     }
+
     .foot-info {
         font-size: 20px;
     }
@@ -214,22 +262,29 @@ kbb-nav::after {
         font-size: 18px;
 
     }
-    
+
     .other-list-item {
         display: none;
     }
+
     .aboutUs-list ul li {
-    margin: 25px 0;     
-}
+        margin: 25px 0;
+    }
 }
 
 
 
 @media screen and (max-width: 768px) {
+    .nav-active {
+        color: rgb(131, 133, 133);
+    }
+    .head .head-logo {
+        background-color: #031837;
+    }
 
     /* 头部logo */
     .head .head-logo img {
-        width: 30px;
+        /* width: 30px; */
         height: 30px;
     }
 
@@ -258,7 +313,8 @@ kbb-nav::after {
     .cooperation li div {
         display: inline;
     }
-    .QRcode img {  
+
+    .QRcode img {
         margin-top: 10px;
     }
 
