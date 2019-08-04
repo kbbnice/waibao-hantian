@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/swiper.css">
+    <link rel="stylesheet" href="css/head.css">
+    <link rel="stylesheet" href="css/index.css">
+    <title>关于我们</title>
+    <style>
+        .time-part a:visited,
+        .time-part a:focus {
+            color: #fff;
+        }
+
+        .clear {
+            content: ' ';
+            display: block;
+            clear: both;
+        }
+
+        .hide-sm {
+            display: inline-block;
+        }
+
+        .about-details {
+            color: #666666;
+            padding: 20px 0;
+            width: 80%;
+            margin: 0 auto;
+            text-align: left;
+            font-size: 14px;
+        }
+
+        .time-part {
+            background: url('imgs/solve-part-bg.png') no-repeat;
+            background-size: 100% 100%;
+
+        }
+
+        .time-inner {
+            width: 80%;
+            margin: 0 auto;
+            padding: 3%;
+        }
+
+        .time-line {
+            background-color: rgba(139, 139, 139, 0.721);
+            color: #fff;
+        }
+
+        ul.col-lg-2 {
+            padding: 0;
+            margin: 0;
+        }
+
+        .time-part li {
+            background-color: rgba(116, 116, 116, 0.435);
+            padding: 0;
+            margin: 0;
+            text-align: center;
+            line-height: 18px;
+        }
+
+        .nav>li>a:hover,
+        .nav>li>a:focus {
+            background-color: #2d5268bf;
+        }
+
+        #myTab {
+            color: white;
+        }
+
+        #myTabContent {
+            color: #fff;
+        }
+
+        #myTabContent .nav-inner {
+            width: 100%;
+            padding: 130px 0 0;
+            text-align: center;
+        }
+
+        #myTabContent .nav-inner p {
+            border: 2px solid #fff;
+            padding: 40px 20px;
+        }
+
+        .time-other {
+            color: #fff;
+            padding: 130px 0 0;
+        }
+
+        .time-other h5:first-child {
+            font-size: 16px;
+        }
+
+        .time-other p {
+            display: inline-block;
+            padding: 15px;
+            cursor: pointer;
+            margin-top: 10px;
+            border: 1px solid rgb(91, 91, 175);
+            color: rgb(78, 78, 251);
+            font-size: 12px;
+        }
+
+        .profile {
+            background-color: #fff;
+            width: 100%;
+        }
+
+        .profile .content-item {
+            width: 100%;
+        }
+
+        .profile .profile-img img {
+            width: 100%;
+        }
+
+        .profile .profile-line {
+            display: none;
+        }
+
+        .profile .profile-line ul {
+            margin: 0 auto;
+        }
+
+        .profile .profile-line li {
+            margin: 15px;
+            line-height: 30px;
+            background-color: rgba(167, 167, 167, 0.292);
+        }
+
+        .patent {
+            width: 90%;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .patent .patent-item {
+            display: flex;
+            display: -webkit-flex;
+            flex-flow: row;
+            align-items: center;
+            margin: 20px 0;
+            justify-content: center;
+        }
+
+        .patent-item div {
+            display: inline-block;
+            height: 100px;
+        }
+
+        .patent-item .patent-img {
+            font-size: 13px;
+            width: 100px;
+            height: 110px;
+            background-color: #707070;
+            line-height: 100px;
+            color: #fff;
+        }
+
+        .patent-item .patent-details {
+            padding-left: 4px;
+            width: 100%;
+            flex: 1 1 auto;
+            font-size: 12px;
+            text-align: left;
+
+        }
+
+        .patent-item .patent-details p {
+            color: #7b7b7b;
+        }
+
+        /* 更多资质 */
+        .more-profile {
+            position: relative;
+            width: 90%;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .more-profile .profile-title {
+            padding-bottom: 10px;
+            border-bottom: 1px solid grey;
+        }
+
+        .more-profile ul {
+            display: flex;
+            display: -webkit-flex;
+            flex-flow: row;
+            justify-content: center;
+        }
+
+        .more-profile li {
+            margin: 0 30px;
+        }
+
+
+
+
+
+        @media screen and (max-width: 992px) {
+
+            .time-other h5:first-child {
+                font-size: 14px;
+            }
+
+            .time-other h5:nth-child(2) {
+                font-size: 12px;
+            }
+
+        }
+
+        @media screen and (max-width: 768px) {
+            .time-inner {
+                width: 100%;
+            }
+
+            .hide-sm {
+                display: none;
+            }
+
+            .profile .profile-line {
+                display: block;
+
+            }
+
+            .patent {
+                width: 99%;
+            }
+
+            .patent-item .patent-img {
+                width: 100px;
+            }
+
+            .more-profile ul {
+                display: inline;
+            }
+
+            .more-profile li {
+                display: inline;
+                margin: 10px 0;
+            }
+
+            .more-profile li img {
+                height: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 头部 start -->
+    <div class="head">
+        <div class="head-logo">
+            <div class="logo-img">
+                <img src="imgs/logo.png" alt="logo">
+                <div class="head-nav show">
+                    <ul class="kbb-nav">
+                        <li class="kbb-nav-li">
+                            <a href="index.html">首页</a>
+                        </li>
+                        <li class="kbb-nav-li">
+                            <a href="coreProduct.html">核心产品</a>
+                            <div class="item-list-detail">
+                                <ul>
+                                    <li>
+                                        <a href="#">我是链接</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">我是链接</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">我是链接</a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="kbb-nav-li">
+                            <a href="service.html">解决方案及服务</a>
+                            <div class="item-list-detail">
+                                <ul>
+                                    <li>
+                                        <a href="#">我是链接</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">我是链接</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">我是链接</a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="kbb-nav-li">
+                            <a href="customCases.html">用户案例</a>
+                            <div class="item-list-detail">
+                                <ul>
+                                    <li>
+                                        <a href="#">我是链接</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">我是链接</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">我是链接</a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="kbb-nav-li">
+                            <a href="news.html">新闻资讯</a>
+                            <div class="item-list-detail">
+                                <ul>
+                                    <!-- <li>
+                                            <a href="#"></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"></a>
+                                        </li> -->
+
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="kbb-nav-li nav-active">
+                            <a href="aboutUs.html">关于我们</a>
+                            <div class="item-list-detail">
+                                <!-- <ul>
+                                        <li>xxxx</li>
+                                        <li>xxxx</li>
+                                        <li>xxxx</li>
+                                        <li>xxxx</li>
+                                    </ul> -->
+                            </div>
+                        </li>
+                        <!-- <li class="kbb-nav-li">
+                                <a href="">加入我们</a>
+                            </li> -->
+                    </ul>
+                </div>
+            </div>
+            <div class="nav-btn">
+                <img src="imgs/nav-up.png" class="nav-up show" alt="">
+                <img src="imgs/nav-down.png" class="nav-down hide" alt="">
+            </div>
+        </div>
+        <div class="bg">
+
+            <div class="swiper-container head-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="imgs/head-img.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="imgs/head-img.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="imgs/head-img.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="imgs/head-img.png" alt="">
+                    </div>
+
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+
+
+        <!-- 导航 start -->
+
+        <!-- 导航 end -->
+
+    </div>
+    <!-- 头部 end -->
+
+    <!-- content start -->
+
+    <div class="content">
+        <!-- 关于航天大道 start -->
+        <div class="core-technology aboutus style=" margin-top: 50px">
+
+
+            <div class="content-item">
+                <div class="content-item-title">
+                    <p>关于航天大道</p>
+                    <p style="color: rgb(3, 116, 169)">ABOUT DAO TECH</p>
+                </div>
+
+                <!-- 介绍内容 -->
+                <p class="about-details">
+                    航天新长征大道科技有限公司是中国航天科技集团有限公司旗下的高新科技企业，公司注册资金5000万。公司以助推中国智能制造为使命，聚焦数据与智能技术创新，致力于为企业提供智能制造系统解决方案、产品和服务，实现智能生产、智能服务、智能商业模式，提升企业价值空间和综合竞争力。
+                </p>
+                <p class="about-details">
+                    航天大道公司来自于航天控制系统的摇篮——北京航天自动控制研究所。北京航天自动控制研究所作为我国首个导弹和运载火箭控制系统总体研究所，在导航制导控制与仿真技术、系统集成与测试验证技术、信息处理与软件工程技术等方面始终处于国内领先地位。建有国家级国防科技重点实验室，圆满完成了“两弹一星”、“载人航天”、“探月工程”和新一代武器装备研制等国家、国防重大科技专项工程，获得国家科技进步奖、省部级科技成果奖400余项。先后有6名两院院士、7名国际宇航科学院院士在所工作。
+                </p>
+
+            </div>
+
+        </div>
+        <!-- 关于航天大道 end -->
+
+        <!-- 时间线 start -->
+        <div class="time-part">
+            <div class="time-inner row">
+                <ul id="myTab" class="nav nav-pills col-lg-3 col-md-3 col-sm-3 col-xs-4 nav nav-pills nav-stacked"
+                    role="tablist">
+                    <!-- <li ><a href="#bulletin" role="tab" data-toggle="pill">公告</a></li> -->
+                    <li class="active"><a href="#item1" role="tab" data-toggle="pill">2018.08.29 </a></li>
+                    <li><a href="#item2" role="tab" data-toggle="pill">2018.07.02</a></li>
+                    <li><a href="#item3" role="tab" data-toggle="pill">2018.03.30</a></li>
+                    <li><a href="#item4" role="tab" data-toggle="pill">2018.02.01</a></li>
+                    <li><a href="#item5" role="tab" data-toggle="pill">2017.11.20</a></li>
+                    <li><a href="#item6" role="tab" data-toggle="pill">2017.10.16</a></li>
+                    <li><a href="#item7" role="tab" data-toggle="pill">2017.09.27</a></li>
+                    <li><a href="#item8" role="tab" data-toggle="pill">2017.05.03</a></li>
+                    <li><a href="#item9" role="tab" data-toggle="pill">2017.03.15</a></li>
+                </ul>
+                <!-- 选项卡面板 -->
+                <div id="myTabContent" class="tab-content  col-lg-6 col-md-6 col-sm-6 col-xs-8">
+                    <div class="tab-pane fade in active" id="item1">
+                        <div class="nav-inner">
+                            <p>2018年03月30日，航天大道与西门子签署战略合作协议。</p>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="item2">
+                        <div class="nav-inner">
+                            <p>2018年07月02日，航天大道与海油发展工程技术公司签订战略合作协议。</p>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="item3">
+                        <div class="nav-inner">
+                            <p>2018年03月30日，航天大道与西门子签署战略合作协议。</p>
+
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="item4">
+                        <div class="nav-inner">
+                            <p>2018年02月01日，航天大道荣获中国人工智能产业“年度成长力企业”！</p>
+
+
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="item5">
+                        <div class="nav-inner">
+                            <p>2017年11月20日，航天大道深圳办事处成立。</p>
+
+
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="item6">
+                        <div class="nav-inner">
+                            <p>2017年10月16日，航天大道济南生产线研发中心成立。</p>
+
+
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="item7">
+                        <div class="nav-inner">
+                            <p>2017年09月27日，航天大道北京分公司成立。</p>
+
+
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="item8">
+                        <div class="nav-inner">
+                            <p>2017年05月03日，航天大道大连软件研发中心成立。</p>
+
+
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="item9">
+                        <div class="nav-inner">
+                            <p>2017年03月15日，航天新长征大道科技有限公司正式成立。</p>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="time-other hide-sm col-lg-3 col-md-3 col-sm-2">
+                    <h5>我们走过的路</h5>
+                    <h5>大道之行天下为公</h5>
+                    <p>查看完整历程</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 时间线 end -->
+
+
+        <!-- 企业资质 start -->
+        <div class="introduction profile">
+
+
+            <div class="content-item">
+                <div class="content-item-title">
+                    <p>公司资质</p>
+                    <p style="color: rgb(3, 116, 169)">COMPANY PROFILE </p>
+                </div>
+                <div class="profile-img hide-sm">
+                    <img src="imgs/qyzz.jpg" alt="">
+                </div>
+                <!-- 公司资质 -->
+                <div class="profile-line">
+                    <ul>
+                        <li>国家一级保密资格</li>
+                        <li>武器装备科研生产许可证</li>
+                        <li>武器装备承制资格</li>
+                        <li>GJB9001B质量体系</li>
+                        <li>GJB5000A军用软件 能力成熟度三级认证</li>
+                        <li>GJB2725A军用软件测评实验室管理体系</li>
+                        <li>职业健康安全认证</li>
+                        <li>环境管理体系认证</li>
+                    </ul>
+                </div>
+                <div class="clear"></div>
+                <div class="patent row">
+                    <div class="patent-item col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <div class="patent-img">
+                            软件著作权
+                        </div>
+                        <div class="patent-details">
+                            <h5>工业大数据产品专利</h5>
+                            <p>DaoMind工业大数据分析及服务平台是大道公司自研的人工智能计算及服务平台，提供完整的数据采集、数据存储、模型训练、模型部署、应用服务业务流程支持。</p>
+                        </div>
+                    </div>
+                    <div class="patent-item col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <div class="patent-img">
+                            软件著作权
+                        </div>
+                        <div class="patent-details">
+                            <h5>工业大数据产品专利</h5>
+                            <p>DaoMind工业大数据分析及服务平台是大道公司自研的人工智能计算及服务平台，提供完整的数据采集、数据存储、模型训练、模型部署、应用服务业务流程支持。</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="clear"></div>
+            <div class="more-profile">
+                <h4 class="profile-title">更多资质</h4>
+                <div>
+                    <ul>
+                        <li>
+                            <img src="imgs/more-profile-1.png" alt="">
+                        </li>
+                        <li>
+                            <img src="imgs/more-profile-2.png" alt="">
+                        </li>
+                        <li>
+                            <img src="imgs/more-profile-3.png" alt="">
+                        </li>
+                        <li>
+                            <img src="imgs/more-profile-4.png" alt="">
+                        </li>
+                        <li>
+                            <img src="imgs/more-profile-5.png" alt="">
+                        </li>
+                        <li>
+                            <img src="imgs/more-profile-6.png" alt="">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 企业资质 end -->
+        </div>
+        <!-- content end -->
+
+        <!-- 尾部 start -->
+        <div class="foot">
+            <div class="row">
+
+                <!-- 公司信息 -->
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                    <div class="foot-info">
+                        <div class="foot-logo">
+                            <img src="imgs/foot-logo.png" alt="">
+                        </div>
+                        <p>航天新长征大道科技有限公司</p>
+                        <div class="info-detail">
+                            <p>
+                                公司电话：
+                                <br>
+                                010-50952530 010-50952532
+                            </p>
+                            <p>
+                                地址：
+                                <br>
+                                北京市丰台区南四环西路128号</p>
+                            <p>辽ICP备18006661号</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 合作商信息 -->
+                <div class="col-lg-3 col-md-3 col-sm-5 col-xs-12">
+                    <div class="cooperation">
+                        <ul>
+                            <!--   如果增加项目则需要改变margin值  -->
+                            <li>
+                                <div class="key">产品和解决方案：</div>
+                                <div class="value">chanpin@htdadao.net</div>
+                            </li>
+                            <li>
+                                <div class="key">商务合作：</div>
+                                <div class="value">office@htdadao.net</div>
+                            </li>
+                            <li>
+                                <div class="key">媒体合作：</div>
+                                <div class="value">market@htdadao.net</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- <div class="item-clear"></div> -->
+
+                <!-- 其他菜单 -->
+                <div class="col-lg-4 col-md-4 col-sm-5 col-xs-6 other-list-item">
+                    <div class="aboutUs-list row">
+                        <ul class="col-lg-6 col-md-6 col-sm-6">
+                            <li>
+                                <a href="">关于我们</a>
+                            </li>
+                            <li>
+                                <a href="">公司简介</a>
+                            </li>
+                            <li>
+                                <a href="">新闻资讯</a>
+                            </li>
+                            <li>
+                                <a href="">联系我们</a>
+                            </li>
+                            <li>
+                                <a href="">加入我们</a>
+                            </li>
+
+                        </ul class="col-lg-6 col-md-6 col-sm-6">
+                        <ul class="col-lg-6">
+                            <li>
+                                <a href="">近期资讯</a>
+                            </li>
+                            <li>
+                                <a href="">大道生产线</a>
+                            </li>
+                            <li>
+                                <a href="">大道数据</a>
+                            </li>
+                            <li>
+                                <a href="">大道物联</a>
+                            </li>
+                            <li>
+                                <a href="">大道慧眼</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 二维码 -->
+                <div class="col-lg-1 col-md-1 col-sm-2 col-xs-12">
+                    <div class="QRcode">
+                        <img src="imgs/QRcode.jpg" alt="二维码">
+                        <p>扫码关注微信</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 尾部 end -->
+        <script src="js/jquery-1.12.4.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script src="js/swiper.js"></script>
+        <script src="js/head.js"></script>
+        <script>
+            $(function () {
+                $('#myTab').on('mouseenter', 'li', function () {
+                    $(this).siblings('li').removeClass('active')
+                    $(this).addClass('active')
+                    var hrefId = $(this).find('a').attr('href');
+                    console.log(hrefId)
+                    $('#myTabContent').find('.tab-pane').removeClass('in active')
+                    $('#myTabContent').find(hrefId).addClass('in active')
+                })
+
+
+
+            })
+
+        </script>
+</body>
+
+</html>
